@@ -3307,6 +3307,13 @@ pre[class*='language-'] pre > code.highlight {
   background-position: bottom;
   background-size: cover;
 }
+#footer:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--mark-bg);
+  content: '';
+}
 #footer-wrap {
   position: relative;
   padding: 40px 20px;
