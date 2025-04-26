@@ -1,0 +1,226 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>TB's Blog site(正在搭建) - 探索技术与成长的旅程</title><meta name="author" content="TempestBird"><meta name="copyright" content="TempestBird"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="TempestBird 的个人博客，记录计算机学习、技术探索、项目经验等内容。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TB&#39;s Blog site(正在搭建)">
+<meta property="og:url" content="https://tempestbirds729804.github.io/page/2/">
+<meta property="og:site_name" content="TB&#39;s Blog site(正在搭建)">
+<meta property="og:description" content="TempestBird 的个人博客，记录计算机学习、技术探索、项目经验等内容。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://tempestbirds729804.github.io/img/onitsuka-tiger-1.svg">
+<meta property="article:author" content="TempestBird">
+<meta property="article:tag" content="Hexo, 计算机, 博客, 技术, 开发, TempestBird">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tempestbirds729804.github.io/img/onitsuka-tiger-1.svg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://tempestbirds729804.github.io/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'TB\'s Blog site(正在搭建)',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/onitsuka-tiger-1.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/grafiti.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://cdn.worldvectorlogo.com/logos/git-bash.svg" alt="Logo"><span class="site-name">TB's Blog site(正在搭建)</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">TB's Blog site(正在搭建)</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2025/03/04/hello-world/" title="First Blog： &quot;About TempestBird, about me&quot;"><img class="post-bg" src="/img/Kid3.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="First Blog： &quot;About TempestBird, about me&quot;"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/04/hello-world/" title="First Blog： &quot;About TempestBird, about me&quot;">First Blog： &quot;About TempestBird, about me&quot;</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-04T10:33:33.590Z" title="Created 2025-03-04 18:33:33">2025-03-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Self-introduction/">Self introduction</a></span></div><div class="content">TempestBird 的计算机修行之路 TempestBird right here，welcome to my Blog.🚀欢迎来看我在赛博空间发布的第一条博客😄。这里是我记录 计算机学习 之地，涵盖编程、技术探索以及本人的思考。无论是技术学习，还是遇到的坑，我会在这里适度分享，欢迎同我交流    🏆 关于我 💻 乐于提高coding能力，正在探索相关技术与想法 📚 记录学习笔记，分享心得 🎯 My Goal：KEEP IMPROVING，成为一个有卓越能力的工程师，有深度思考的技术探索者 💬 喜欢交流，欢迎通过 GitHub 联系我，或者发邮件到2806460036@qq.com  </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/onitsuka-tiger-1.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">TempestBird</div><div class="author-info-description">TempestBird 的个人博客，记录计算机学习、技术探索、项目经验等内容。</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/TempestBirds729804"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/04/24/Leetcode-Hot-100-5-maxArea/" title="&lt;Leetcode Hot 100&gt; 5.盛最多水的容器"><img src="/img/Leet.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="&lt;Leetcode Hot 100&gt; 5.盛最多水的容器"/></a><div class="content"><a class="title" href="/2025/04/24/Leetcode-Hot-100-5-maxArea/" title="&lt;Leetcode Hot 100&gt; 5.盛最多水的容器">&lt;Leetcode Hot 100&gt; 5.盛最多水的容器</a><time datetime="2025-04-24T02:21:59.000Z" title="Created 2025-04-24 10:21:59">2025-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/11/Leetcode-Hot-100-4-moveZeroes/" title="&lt;Leetcode Hot 100&gt; 4:移动零"><img src="/img/Leet.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="&lt;Leetcode Hot 100&gt; 4:移动零"/></a><div class="content"><a class="title" href="/2025/04/11/Leetcode-Hot-100-4-moveZeroes/" title="&lt;Leetcode Hot 100&gt; 4:移动零">&lt;Leetcode Hot 100&gt; 4:移动零</a><time datetime="2025-04-11T01:44:49.000Z" title="Created 2025-04-11 09:44:49">2025-04-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/12/Leetcode-Hot-100-3-LongestConsecutive/" title="&lt;Leetcode Hot 100&gt;: 3.连续最长序列"><img src="/img/Leet.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="&lt;Leetcode Hot 100&gt;: 3.连续最长序列"/></a><div class="content"><a class="title" href="/2025/03/12/Leetcode-Hot-100-3-LongestConsecutive/" title="&lt;Leetcode Hot 100&gt;: 3.连续最长序列">&lt;Leetcode Hot 100&gt;: 3.连续最长序列</a><time datetime="2025-03-12T12:44:21.000Z" title="Created 2025-03-12 20:44:21">2025-03-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/07/Leetcode-Hot-100-2-groupAnagrams/" title="&lt;Leetcode Hot 100&gt;: 2.字符异位词分类"><img src="/img/Leet.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="&lt;Leetcode Hot 100&gt;: 2.字符异位词分类"/></a><div class="content"><a class="title" href="/2025/03/07/Leetcode-Hot-100-2-groupAnagrams/" title="&lt;Leetcode Hot 100&gt;: 2.字符异位词分类">&lt;Leetcode Hot 100&gt;: 2.字符异位词分类</a><time datetime="2025-03-07T09:19:21.000Z" title="Created 2025-03-07 17:19:21">2025-03-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/06/Leetcode-Hot-100-1-twoSum/" title="&lt;Leetcode Hot 100&gt;: 1.两数之和"><img src="/img/Leet.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="&lt;Leetcode Hot 100&gt;: 1.两数之和"/></a><div class="content"><a class="title" href="/2025/03/06/Leetcode-Hot-100-1-twoSum/" title="&lt;Leetcode Hot 100&gt;: 1.两数之和">&lt;Leetcode Hot 100&gt;: 1.两数之和</a><time datetime="2025-03-06T09:27:08.000Z" title="Created 2025-03-06 17:27:08">2025-03-06</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/LeetcodeHot100/"><span class="card-category-list-name">LeetcodeHot100</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Self-introduction/"><span class="card-category-list-name">Self introduction</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/easy/" style="font-size: 1.23em; color: #999ea6">easy</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.5em; color: #99a9bf">算法</a> <a href="/tags/TempestBird%E8%87%AA%E9%99%88/" style="font-size: 1.1em; color: #999">TempestBird自陈</a> <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88-Two-Pointers/" style="font-size: 1.23em; color: #999ea6">双指针 Two Pointers</a> <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8HashMap/" style="font-size: 1.37em; color: #99a4b2">哈希表HashMap</a> <a href="/tags/mid/" style="font-size: 1.37em; color: #99a4b2">mid</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              April 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              March 2025
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">6</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-04-26T03:43:30.380Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/grafiti.png);"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By TempestBird</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["我爱我本质的幽暗时分"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["我爱我本质的幽暗时分"])
+}
+typedJSFn.run(subtitleType)</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
